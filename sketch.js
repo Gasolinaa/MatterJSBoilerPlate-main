@@ -39,6 +39,10 @@ function draw() {
 	rectMode(CENTER);
 	imageMode(CENTER);
 
+
+
+
+	
 	background("orange");
 	ground.display()
 	leftSide.display()
