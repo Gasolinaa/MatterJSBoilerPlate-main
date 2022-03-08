@@ -3,13 +3,13 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-var ball;
+var ball, ballImage;
 var ground;
 var leftSide;
 var rightSide
 
 function preload() {
-
+	ballImage = loadImage("bola d epapel.png");
 }
 
 function setup() {
@@ -37,11 +37,16 @@ function setup() {
 
 function draw() {
 	rectMode(CENTER);
-	background(0);
+	imageMode(CENTER);
+
+	background("orange");
 	ground.display()
 	leftSide.display()
 	rightSide.display()
 	ellipse(ball.position.x, ball.position.y, 20);
+	push()
+	image(ballImage,ball.position.x, ball.position.y, 45, 45);
+	pop()
 	drawSprites();
 
 }
